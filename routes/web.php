@@ -16,4 +16,7 @@ Route::get('/', function () {
 });
 Route::get('contacto', function () {
     return view('contacto');
-})->name('contacto');
+});
+Route::get('blog/{id}', function ($id) {
+    return view('blog', ['identificador'=> $id]);
+});
