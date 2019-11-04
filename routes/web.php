@@ -23,3 +23,15 @@ Route::get('blog/{id}', function ($id) {
 Route::get('blog2/{id}/{nombre}', function ($id, $nombre) {
     return view('blog2', ['identificador2'=> $id, 'nombre' => $nombre]);
 })->where(array('nombre'=>'[a-zA-Z]+','id'=>'[0-9]+'));
+
+//Otra forma para lode los numero y las letras
+
+/*Route::pattern('id', '[0-9]+');
+Route::pattern('nombre', '[a-zA-Z]+');*/
+
+
+Route::get('saludo', 'SaludoController@saludar');
+Route::get('saludoNombre/{nombre}', 'SaludoController@saludarNombre');
+Route::get('saludoNombreColor/{nombre}/{colore?}', 'SaludoController@saludarNombreColor');
+
+    
