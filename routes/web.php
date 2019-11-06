@@ -37,6 +37,15 @@ Route::get('saludoNombreColor/{nombre}/{colore?}', 'SaludoController@saludarNomb
 
 Route::get('formNombreApellido', 'SaludoController@form1')->name('viewForm1');
 Route::get('form1/get', 'SaludoController@storeForm1')->name('storeForm1');
+
+Route::get('formPost', 'SaludoController@form2')->name('viewForm2');
+Route::post('form2/post', 'SaludoController@storeForm2')->name('storeForm2');
+
+Route::get('form3', 'SaludoController@form3')->name('viewForm3');
+Route::post('form3/post', 'SaludoController@storeForm3')->name('storeForm3');
+
+Route::get('val1', 'SaludoController@val1')->name('formval1');
+Route::post('val1/post', 'SaludoController@validacion1')->name('storeVal1');
 	
 
     

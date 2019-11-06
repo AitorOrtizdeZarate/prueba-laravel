@@ -92,7 +92,8 @@
                     <a href="saludoNombre/Aitor">Saludar con nombre</a>
                     <a href="saludoNombreColor/Aitor/FF0000">Color</a>
                     <a href="{{route('viewForm1')}}">Formulario 1</a>
-                    <a href="https://github.com/laravel/laravel">GitHub</a>
+                    <a href="{{route('viewForm2')}}">Formulario 2</a>
+                    <a href="{{route('formval1')}}">Formulario Validacion</a>
                 </div>
             </div>
         </div>
