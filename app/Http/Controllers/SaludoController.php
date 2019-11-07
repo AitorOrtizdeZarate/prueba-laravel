@@ -56,9 +56,11 @@ class SaludoController extends Controller
     	$validatedData = $request->validate([
     		'nombre' => 'required|min:2|max:15',
     		'apellido' => 'required|min:2|max:20',
-    		'email' => 'required|email',
-    		'telefono' => 'regex:/6%'
-    	])
-    }
+    		'email' => 'required|email'
+    		//'telefono' => 'regex:/6%'
+    	]);
+    	return view('nuevocontacto')->with('nombre', $request->input('nombre'))->with('apellido', $request->input('apellido'))->with('email', $request->input('email'))->with('telefono', $request->input('telefono'));
+    
 
+}
 }

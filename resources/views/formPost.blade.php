@@ -5,6 +5,7 @@
 </head>
 <body>
  <form action="{{route('storeForm2')}}" method="post">
+ 	@csrf
  	Nombre<input type="text" name="nombre">
  	Apellido<input type="text" name="apellido">
 
